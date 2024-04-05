@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <script>
+    function toggleMenu() {
+    var menuItems = document.querySelector('#header-items');
+    menuItems.style.display = menuItems.style.display === 'none' ? 'flex' : 'none';
+    menuItems.style.margin = "0";
+    console.log("testsetset")
+  }
+  </script>
   <div class="announcements">
     <p>
       afejsfh aklsefl
@@ -17,11 +26,14 @@
   </div>
   <header id="header">
     <h1>Alina Brown</h1>
-    <nav>
-      <a href="#sec_2">1 seafe</a>
-      <a href="#sec_3">2 fseafe</a>
-      <a href="#sec_3">easf 3</a>
-      <a href="#sec_3">hsdg4</a>
+    <a href="#"onclick="toggleMenu()" id="hamburger-icon">
+      menu &dArr;
+    </a>
+    <nav id="header-items">
+      <a href="#sec_1" class="header-item" id="header-item-top">1 seafe</a>
+      <a href="#sec_1" class="header-item">2 fseafe</a>
+      <a href="#sec_1" class="header-item">easf 3</a>
+      <a href="#sec_1" class="header-item" id="header-item-bottom">hsdg4</a>
     </nav>
   </header>
 
@@ -30,10 +42,11 @@
       <img id="homepageimg" src="homepage.jpeg"/>
       <div class="centered">
         <div id="header-img-text">asefiksajeflsje iohjo sdaflksad</div>
-        <button class="button"><div class="button-text"><div style="font-size:large;">fasseakjlh asflkkl afdhjasdf alkfed</div><div style="font-size: large;">&xrarr;</div></div></button>
+        <button class="button" id="header-img-button"><div class="button-text"><div style="font-size:large;">fasseakjlh asflkkl afdhjasdf alkfed</div><div style="font-size: large;">&xrarr;</div></div></button>
       </div>
     </div>
   </section>
+  <!--
   <section class="hero-1" id="sec_2">
     <div class="container">
       <img id="img" src="wavessvg.svg"/>
@@ -52,8 +65,8 @@
         </div>
       </div>
     </div>
-  </section>
-
+  </section>-->
+<!--
   <section class="hero" id="sec_3">
     <div class="hero-text" style="margin-top:20vh;">
       <h1 class="hero-header">easjkakjlsfklsajf</h1>
@@ -62,7 +75,7 @@
     <div>
       <button class="button"><div class="button-text"><div>fasseakjlh asflkkl afdhjasdf alkfed</div><div style="font-size: large ;">&xrarr;</div></div></button>  
     </div>
-  </section>
+  </section>-->
 
   <footer>
     <img src="logo.png" alt="Logotyp">
