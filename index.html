@@ -9,11 +9,22 @@
 </head>
 <body>
   <script>
+    var pointDown = 0;
     function toggleMenu() {
     var menuItems = document.querySelector('#header-items');
     menuItems.style.display = menuItems.style.display === 'none' ? 'flex' : 'none';
-    menuItems.style.margin = "0";
-    console.log("testsetset")
+    
+    var menuDownArr = document.querySelector('#hamburger-icon-down');
+    var menuUppArr = document.querySelector('#hamburger-icon-up');
+    pointDown++;
+    if(pointDown % 2 == 0){
+      menuDownArr.style.display = 'none'
+      menuUppArr.style.display = 'block'
+    }
+    else{
+      menuDownArr.style.display = 'block'
+      menuUppArr.style.display = 'none'
+    }
   }
   </script>
   <div class="announcements">
@@ -25,10 +36,15 @@
     </p>
   </div>
   <header id="header">
-    <h1>Alina Brown</h1>
-    <a href="#"onclick="toggleMenu()" id="hamburger-icon">
-      menu &dArr;
-    </a>
+    <div id="header-top">
+      <h1>Alina Brown</h1>
+      <a href="#"onclick="toggleMenu()" id="hamburger-icon-down">
+        &darr;
+      </a>
+      <a href="#"onclick="toggleMenu()" id="hamburger-icon-up">
+        &uarr;
+      </a>
+    </div>
     <nav id="header-items">
       <a href="#sec_1" class="header-item" id="header-item-top">1 seafe</a>
       <a href="#sec_1" class="header-item">2 fseafe</a>
