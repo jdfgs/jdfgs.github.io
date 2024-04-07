@@ -262,6 +262,14 @@ nav a {
   }
 }
 
+.image{
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 footer {
   background-color: #f2f2f2;
   padding: 20px;
